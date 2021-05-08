@@ -1,0 +1,63 @@
+/*
+Variables
+*/
+
+:root {
+  --clr-background: #e2e2e2;
+  --clr-header1: #121212;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2e2e2e;
+  --clr-text: #353535;
+  --clr-divbackground: #b6b6b6;
+  --clr-divbackgroundhead: #373737;
+  --clr-nav: #cacaca;
+  --link-primary: #1b77b5;
+  --link-secondary: #44a3e3;
+  --transition: all 0.3s linear;
+}
+
+/* Browser default values reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* global style for all headers */
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+/* global style for header 1 */
+h1 {
+  font-size: 4rem;
+  color: var(--clr-header1);
+}
+
+/* header styling */
+.page-title {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+/* global style for links */
+a {
+  text-decoration: none;
+}
+
+.page-title h1 {
+  padding-bottom: 2rem;
+}
+
+.page-title a {
+  font-size: 3rem;
+  color: var(--link-primary);
+  transition: var(--transition);
+}
+
+.page-title a:hover {
+  color: var(--link-secondary);
+}

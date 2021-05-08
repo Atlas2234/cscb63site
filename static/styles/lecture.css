@@ -1,0 +1,87 @@
+/*
+Variables
+*/
+:root {
+  --clr-background: #e2e2e2;
+  --clr-header1: #121212;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2e2e2e;
+  --clr-text: #353535;
+  --clr-divbackground: #b6b6b6;
+  --clr-divbackgroundhead: #373737;
+  --clr-nav: #cacaca;
+  --link-primary: #1b77b5;
+  --link-secondary: #44a3e3;
+  --transition: all 0.3s linear;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 1.5rem;
+}
+
+.head {
+  background: grey;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+  align-content: center;
+}
+
+.info-grey {
+  text-align: center;
+  background: rgb(165, 165, 165);
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+  align-content: center;
+}
+
+.info-white {
+  text-align: center;
+  background: rgb(219, 219, 219);
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+  align-content: center;
+}
+
+p a {
+  color: rgb(50, 50, 182);
+}
+
+p a:hover {
+  color: rgb(106, 106, 182);
+  text-decoration: underline;
+}
+
+.lecture-file {
+  display: none;
+}
+
+.lecture-file img {
+  margin-bottom: 0.5rem;
+}
+
+.lecture-file p {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    display: none;
+  }
+  .lecture-file {
+    display: block;
+    text-align: center;
+  }
+}

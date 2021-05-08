@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCB63</title>
+
+    <link rel="stylesheet" href="./static/styles/account.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div class="page-title" id="top-page">
+            <h1>Create an Account</h1>
+        </div>
+
+        <!-- <center><hr class="big-line"></center> -->
+
+        <div class="form-container">
+
+            
+            <form action="/create_account" method="get">
+                <label for="utorid">Username</label>
+                <input type="text" id="utorid" name="user_id">
+
+                <br>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="user_name">
+
+                <br>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="user_password">
+
+                <br>
+
+                <div class="selection">
+                    <input type="radio" id="s_position" name="user_position" value="student"> Student
+                    <input type="radio" id="i_position" name="user_position" value="instructor"> Instructor
+                </div>
+
+
+                <br>
+
+                <button type="submit">Create Account</button>
+
+                <br>
+
+                <a href="/">Click me to go back!</a>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Links</title>
+ <link rel="stylesheet" href="./static/styles/login.css">
+ <link rel="stylesheet" href="./static/styles/navbar.css">
+ <link rel="stylesheet" href="./static/styles/instructor_grade.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--semantic for navbar-->
+    <nav class="nav-bar">
+        <!-- unordered list of links for navigating the website -->
+        <ul class="nav-ul">
+            <li id="title"><a href="/main">CSCB63</a></li>
+            <li class="ul-space"></li>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/grade">Grades</a></li>
+            <li><a href="/announcements">Announcements</a></li>
+            <li><a href="/lecture">Lectures</a></li>
+            <li><a href="/tutorial">Tutorials</a></li>
+            <li><a href="/assignment">Assignments</a></li>
+            <li><a href="/test">Tests</a></li>
+            <li><a href="/logout" id="log">Log Out</a></li>
+        </ul>
+    </nav>
+
+     <div class="content">
+        <div class="page-title" id="top-page">
+            <h1>Regrade Requests</h1>
+        </div>
+
+        <div class="table">
+            <div class="head">
+                <h4>Username</h4>
+            </div>
+            <div class="head">
+                <h4>Name</h4>
+            </div>
+            <div class="head">
+                <h4>Regrade Request</h4>
+            </div>
+            <div class="head">
+                <h4>Reason for Request</h4>
+            </div>
+          
+            {% for item in instructor %}
+            <div class="info-grey">
+                {{ item['utorid'] }}
+            </div>
+            <div class="info-grey">
+                {{ item['name'] }}
+            </div>
+            <div class="info-grey">
+                {{ item['assessments'] }}
+            </div>
+            <div class="info-grey">
+                {{ item['reason'] }}
+            </div>
+            {% endfor %}
+          </div>
+
+        <center><a href="/grade"><h4>Click here to go back</h4></a></center>
+
+        <center> <hr class="big-line big-line-2"> </center>
+
+        <center><h2>Enter any grade changes using the form below</h2></center>
+
+        <div class="wrapper">
+
+            <div class="space"></div>
+
+            <div class="login-form-div">
+                <form action="/view-regrade" method="get">
+                    <label for="utorid">Username</label>
+                    <input type="text" id="utorid" name="user_id">
+
+                    <br>
+
+                    <label for="assessment">Assessment</label>
+                    <input type="text" id="assessment" name="student_assessment">
+
+                    <br>
+
+                    <label for="grade">Grade</label>
+                    <input type="text" id="grade" name="student_grade">
+
+                    <br>
+
+                    <button type="submit">Submit</button>
+
+                    <br>
+
+                </form>
+
+                <div class="space"></div>
+            </div>
+
+        </div>
+
+        <div id="arrow_image">
+
+            <a href="#title"><img id="arr_img" src="./static/images/Webp.net-resizeimage.png" alt="web"></a>
+    
+        </div>
+    
+        <footer class="footer">
+            <ul class="footer-ul">
+               <li class="footer-img"><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"><img
+                        src="./static/images/uoft-cs-faculty-logo.png" alt="Image of UofT Computer Science Faculty Logo"></a></li>
+               <li class="ul-space"></li>
+               <li class="footer-text">Site Design by: David Zhang and Maliha Lodi</li>
+            </ul>
+         </footer>
+        
+    </div>
+  
+</body>
+</html>

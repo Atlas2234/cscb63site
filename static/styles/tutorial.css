@@ -1,0 +1,58 @@
+/*
+Variables
+*/
+:root {
+  --link-primary: #1b77b5;
+  --link-secondary: #44a3e3;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.head {
+  background: grey;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.info-grey {
+  text-align: center;
+  background: rgb(165, 165, 165);
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+  align-content: center;
+}
+
+.info-white {
+  text-align: center;
+  background: rgb(219, 219, 219);
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+  align-content: center;
+}
+
+p a {
+  color: rgb(50, 50, 182);
+}
+
+p a:hover {
+  color: rgb(106, 106, 182);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+}

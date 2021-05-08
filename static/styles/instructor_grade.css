@@ -1,0 +1,54 @@
+a h4 {
+  color: var(--link-primary);
+  transition: var(--transition);
+  justify-content: center;
+  margin: 2rem;
+}
+
+a h4:hover {
+  color: var(--link-secondary);
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 1rem;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+}
+
+.head {
+  background: grey;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+  align-content: center;
+}
+
+.info-grey {
+  text-align: center;
+  background: rgb(185, 184, 184);
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+  align-content: center;
+}
+
+.big-line-2 {
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-text {
+  margin-right: 3rem;
+}

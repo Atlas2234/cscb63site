@@ -1,0 +1,48 @@
+/*
+Variables
+*/
+:root {
+  --clr-background: #e2e2e2;
+  --clr-header1: #121212;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2e2e2e;
+  --clr-text: #353535;
+  --clr-divbackground: #b6b6b6;
+  --clr-divbackgroundhead: #373737;
+  --clr-nav: #cacaca;
+  --link-primary: #1b77b5;
+  --link-secondary: #44a3e3;
+  --transition: all 0.3s linear;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.head {
+  background: grey;
+  text-align: center;
+}
+
+.table div {
+  border-style: solid;
+  border-width: 2px;
+}
+
+.info {
+  background: rgb(194, 194, 194);
+}
+
+.buffer {
+  height: 32%;
+}

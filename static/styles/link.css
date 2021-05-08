@@ -1,0 +1,18 @@
+.text-block {
+  text-align: center;
+  margin: 1.2rem auto;
+  width: 50%;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sample {
+  height: 20%;
+}
+
+@media screen and (max-width: 768px) {
+}

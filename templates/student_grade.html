@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSCB63</title>
+
+   <link rel="stylesheet" href="./static/styles/navbar.css">
+   <link rel="stylesheet" href="./static/styles/student_grade.css">
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+   <!--semantic for navbar-->
+   <nav class="nav-bar">
+      <!-- unordered list of links for navigating the website -->
+      <ul class="nav-ul">
+         <li id="title"><a href="/main">CSCB63</a></li>
+         <li class="ul-space"></li>
+         <li><a href="/main">Home</a></li>
+         <li><a href="/grade">Grades</a></li>
+         <li><a href="/announcements">Announcements</a></li>
+         <li><a href="/lecture">Lectures</a></li>
+         <li><a href="/tutorial">Tutorials</a></li>
+         <li><a href="/assignment">Assignments</a></li>
+         <li><a href="/test">Tests</a></li>
+         <li><a href="/logout" id="log">Log Out</a></li>
+      </ul>
+   </nav>
+
+   <!-- container for the contents of page -->
+   <div class="content">
+      <!-- header -->
+      <div class="page-title" id="top-page">
+         <h1>CSCB63 Student Grades</h1>
+         <center>
+            <hr class="big-line">
+         </center>
+      </div>
+
+
+      <div class="table">
+         <div class="head">
+            Assessments
+         </div>
+         <div class="head">
+            Grade (out of 100)
+         </div>
+         {% for item in student %}
+         <div class="info">
+            {{ item['assessments'] }}
+         </div>
+         <div class="info">
+            {{ item['grade'] }}
+         </div>
+         {% endfor %}
+      </div>
+
+      <h4>Submit a form to request a regrade!</h4>
+      <div class="wrapper">
+
+         <div class="space"></div>
+
+         <div class="login-form-div">
+            <form action="/grade" method="get" id="student-regrade-form">
+
+               <label for="name">Name</label>
+               <input type="text" id="name" name="student_name">
+
+               <br>
+
+               <label for="assessment">Assessment</label>
+               <input type="text" id="assessment" name="student_assessment">
+
+               <br>
+
+               <label for="grade">Reason for Request</label>
+               <textarea name="student_reason" id="reason" cols="75" rows="10"></textarea>>
+
+               <button type="submit">Submit</button>
+
+               <br>
+
+            </form>
+            <div class="space"></div>
+         </div>
+
+      </div>
+
+      <div class="buffer"> </div>
+
+
+      <!-- div for the arrow key -->
+      <div id="arrow_image">
+
+         <a href="#title"><img id="arr_img" src="./static/images/Webp.net-resizeimage.png" alt="web"></a>
+
+      </div>
+
+      <!-- semantic for the footer -->
+      <footer class="footer">
+         <ul class="footer-ul">
+            <li class="footer-img"><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"><img
+                     src="./static/images/uoft-cs-faculty-logo.png"
+                     alt="Image of UofT Computer Science Faculty Logo"></a></li>
+            <li class="ul-space"></li>
+            <li class="footer-text">Site Design by: David Zhang and Maliha Lodi</li>
+         </ul>
+      </footer>
+   </div>
+
+</body>
+
+</html>

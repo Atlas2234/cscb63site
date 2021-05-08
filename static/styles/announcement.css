@@ -1,0 +1,62 @@
+/*
+Variables
+*/
+:root {
+  --clr-background: #e2e2e2;
+  --clr-header1: #121212;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2e2e2e;
+  --clr-text: #353535;
+  --clr-divbackground: #b6b6b6;
+  --clr-divbackgroundhead: #373737;
+  --clr-nav: #cacaca;
+  --link-primary: #1b77b5;
+  --link-secondary: #44a3e3;
+  --transition: all 0.3s linear;
+}
+
+/* styling for the main container of the content of the page
+used flexbox */
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* styling for the header */
+.title h1 {
+  padding-top: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* styling for each announcment container */
+.card {
+  margin: 0 auto 3rem auto;
+  width: 50%;
+  background: var(--clr-divbackground);
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--clr-header2);
+  padding: 0.5rem 1rem 1rem 1.5rem;
+}
+
+/* styling for the text and headers of the announcements */
+.card h2,
+h3,
+p {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* adjusts the padding and margin for smaller screens */
+  .title h1 {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .card {
+    width: 80%;
+  }
+}

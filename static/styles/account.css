@@ -1,0 +1,164 @@
+/*
+Variables
+*/
+
+:root {
+  --clr-background: #e2e2e2;
+  --clr-header1: #121212;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2e2e2e;
+  --clr-text: #353535;
+  --clr-divbackground: #b6b6b6;
+  --clr-divbackgroundhead: #373737;
+  --clr-nav: #cacaca;
+  --link-primary: #1b77b5;
+  --link-secondary: #44a3e3;
+  --transition: all 0.3s linear;
+}
+
+/* Browser default values reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* global style for all headers */
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+/* global style for body */
+body {
+  background: var(--clr-background);
+  /* line-height: 1.6; */
+  font-size: 1.2rem;
+  color: var(--clr-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* global style for header 1 */
+h1 {
+  font-size: 4rem;
+  color: var(--clr-header1);
+}
+
+/* styling for the main container of the content of the page
+used flexbox */
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header styling */
+.page-title {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  margin: 0 auto;
+}
+
+/* centers the form with margin, also uses flexbox for the inner inputs */
+form {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  width: 14rem;
+}
+
+/* Adds height to the input field, padding of left and right determines how far the text shows */
+#name,
+#password,
+#utorid {
+  padding: 5px 10px;
+}
+
+/* Styles the radio inputs */
+.selection input {
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+form a {
+  text-align: center;
+  color: var(--link-primary);
+  transition: var(--transition);
+}
+
+form a:hover {
+  color: var(--link-secondary);
+}
+
+form label {
+  margin: 0 auto;
+}
+
+/* styling of input button */
+form button {
+  /* change background color of button */
+  background-color: rgb(64, 171, 243);
+  border-radius: 3px;
+  /* remove border */
+  border: none;
+  /* add text color */
+  color: white;
+  /* make button taller */
+  padding: 15px 20px;
+  /* when cursor is over the button, change it to make it a hand */
+  cursor: pointer;
+  /* adds transition for button */
+  transition: var(--transition);
+  width: 70%;
+  margin: 0 auto;
+}
+
+form button:hover {
+  background-color: rgb(80, 190, 243);
+}
+
+/* style for the longer lines */
+/* .big-line {
+  border-width: 1px;
+  border-style: solid;
+  width: 30%;
+  border-radius: 3px;
+} */
+
+input:focus {
+  background-color: #dad6d6;
+}
+
+.form-container {
+  text-align: center;
+  margin: 1rem auto 0 auto;
+  background-color: var(--clr-divbackground);
+  padding: 0 10rem;
+  border-style: solid;
+  border-width: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 10rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .selection {
+    display: flex;
+    flex-direction: column;
+  }
+  .selection input {
+    margin-bottom: 0.3rem;
+  }
+}

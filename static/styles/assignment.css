@@ -1,0 +1,80 @@
+:root {
+  --clr-background: #e2e2e2;
+  --clr-header1: #121212;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2e2e2e;
+  --clr-text: #353535;
+  --clr-divbackground: #b6b6b6;
+  --clr-divbackgroundhead: #373737;
+  --clr-nav: #cacaca;
+  --link-primary: #1b77b5;
+  --link-secondary: #44a3e3;
+  --transition: all 0.3s linear;
+}
+.page-title {
+  text-align: center;
+  /* used padding instead of margin so when navigating to the page title it does not
+  display behind the navbar */
+  padding-top: 5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.page-title a {
+  color: var(--link-primary);
+  transition: var(--transition);
+}
+
+.page-title a:hover {
+  color: var(--link-secondary);
+}
+
+.big-line {
+  margin: 1rem 1rem;
+}
+
+.little-line {
+  margin: 1rem 1rem;
+}
+
+#last-text {
+  margin-bottom: 2rem;
+}
+
+/* styling for the main container of the content of the page
+used flexbox */
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-block {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.text-block a {
+  color: var(--link-primary);
+  transition: var(--transition);
+}
+
+.text-block a:hover {
+  color: var(--link-secondary);
+}
+
+/* media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .page-title {
+    text-align: center;
+    padding-top: 2rem;
+    margin: 1rem auto;
+    width: 80%;
+  }
+  .text-block {
+    margin: 1rem auto;
+    width: 80%;
+  }
+}
